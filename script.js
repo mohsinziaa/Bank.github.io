@@ -26,6 +26,13 @@ const closeModal = function () {
   overlay.classList.add('hidden');
 };
 
+// Fading animation.
+nav.addEventListener('mouseover', e => {
+  if (e.target.classList.contains('nav__link')) {
+    console.log(e.target);
+  }
+});
+
 // Page Navigation.
 navigationLinks.addEventListener('click', e => {
   e.preventDefault();
@@ -74,4 +81,28 @@ btnCloseCookie.addEventListener('click', () => {
 btnScrollTo.addEventListener('click', e => {
   e.preventDefault();
   section1.scrollIntoView({ behavior: 'smooth' });
+});
+
+// Operations Tab.
+tabsContainer.addEventListener('click', e => {
+  let buttonClicked = e.target.closest('.operations__tab');
+  console.log(buttonClicked);
+
+  if (!buttonClicked) {
+    return;
+  }
+
+  // Removing the active class.
+  tabs.forEach(tab => tab.classList.remove('operations__tab--active'));
+  tabsContent.forEach(contentTab =>
+    contentTab.classList.remove('operations__content--active')
+  );
+
+  // Activate the tab.
+  buttonClicked.classList.add('operations__tab--active');
+
+  // Activate the content.
+  document
+    .querySelector(`.operations__content--${buttonClicked.dataset.tab}`)
+    .classList.add('operations__content--active');
 });
