@@ -38,7 +38,7 @@ const navbarFade = (event, opacity) => {
 
     otherLinks.forEach(link => {
       link === linkHovered
-        ? (link.style.opacity = opacity)
+        ? (link.style.opacity = 1)
         : (link.style.opacity = opacity);
     });
     logo.style.opacity = opacity;
