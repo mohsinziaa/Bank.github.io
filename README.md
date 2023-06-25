@@ -24,4 +24,4 @@ Contributions are welcome! If you have any suggestions, bug fixes, or feature en
 Enjoy using the SmartBank and experience banking like never before!<br>
 Feel free to customize the content to align with your specific application and its features.<br>
 
-_Try the website here_: <a href="https://mohsinziaa.github.io/Bank.github.io/" target = "_blank"> Bank</a>
+_Try the website here_: <a href="https://mohsinziaa.github.io/SmartBank/" target = "_blank"> Bank</a>
